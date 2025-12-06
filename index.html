@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CraftyTech.ai — Digital Solutions </title>
+  <meta name="description" content="CraftyTech.ai — Websites, Mobile Apps, Branding, UI/UX and Digital Marketing for startups and growing businesses." />
+  <link rel="icon" href="https://via.placeholder.com/32x32?text=CT" /> 
+  <style>
+    :root{
+      /* Color variables */
+      --bg:#0f1724; --muted:#94a3b8; --accent:#06b6d4; --accent-2:#0ea5b5; --card:#0b1220; --glass: rgba(255,255,255,0.03);
+      /* Layout/Style variables */
+      --radius:14px; --maxw:1100px; --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    /* Main body styles and background gradient */
+    body{margin:0;font-family:var(--sans);background:linear-gradient(180deg,#071021 0%, #071827 60%);color:#e6eef6;line-height:1.5}
+    .container{max-width:var(--maxw);margin:0 auto;padding:36px}
+    /* Header and Navigation */
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:10px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .logo img{width: 75px;height:auto}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a.cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 14px;border-radius:10px;color:#02121a}
+
+    /* Hero Section */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 0}
+    .eyebrow{display:inline-block;background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:999px;color:var(--accent);font-weight:700;margin-bottom:18px}
+    h1{font-size:40px;margin:0 0 14px;color:#ffffff}
+    p.lead{color:var(--muted);margin:0 0 22px}
+    .buttons{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#02121a}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* Cards and Stats */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:18px;padding:20px}
+    .stats{display:flex;gap:12px;align-items:center}
+    .stat{padding:10px;border-radius:12px;background:rgba(255,255,255,0.02);text-align:center}
+    .stat h3{margin:0;color:#fff}
+    .stat p{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+    /* Services Section */
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0}
+    .service{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:18px;border-radius:12px}
+    .service h4{margin:0 0 8px}
+    .service p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Portfolio Section */
+    .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}
+    .project{border-radius:12px;overflow:hidden;background:#06111a}
+    .project img{width:100%;display:block}
+    .project .meta{padding:12px}
+
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03);margin-top:28px}
+
+    /* Sticky Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 1000;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+    .back-to-top.show {
+      display: flex;
+    }
+
+    /* Hover Effects */
+    .btn:hover {
+      opacity: 0.9;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+
+    /* Chatbot Placeholder */
+    .chatbot {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: var(--card);
+      color: var(--muted);
+      padding: 10px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* WhatsApp Contact Button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      z-index: 1000;
+    }
+    .whatsapp-button img {
+      width: 32px;
+      height: 32px;
+    }
+    .whatsapp-button:hover {
+      background: #1ebe5b;
+    }
+
+    /* Custom Cursor Icon */
+    body {
+      cursor: url('https://example.com/custom-cursor.png'), auto;
+    }
+
+    /* Responsive Design */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .portfolio{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .brand .name{display:none}
+      nav{display:none}
+      .services{grid-template-columns:1fr}
+      .portfolio{grid-template-columns:1fr}
+      h1{font-size:28px}
+    }
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .chip{display:inline-block;padding:6px 10px;background:rgba(255,255,255,0.02);border-radius:999px}
+    .center{text-align:center}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo card">
+          <img src="img/logo.png" alt="CraftyTech.ai logo" />
+        </div>
+        <div>
+          <div style="font-weight:800">CraftyTech.ai</div>
+          <div style="font-size:13px;color:var(--muted)">Digital Solutions </div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#carrers">carrers</a>
+        <a href="#contact" class="cta">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Launch faster • Design smarter</div>
+          <h1>We build websites, apps & brands that help businesses grow.</h1>
+          <p class="lead">CraftyTech.ai combines creative design and reliable engineering to deliver modern digital products — quickly and affordably. From startups to growing businesses — we make ideas real.</p>
+          <div class="buttons">
+            <button class="btn primary" onclick="location.href='#contact'">Get a Quote</button>
+            <button class="btn ghost" onclick="location.href='#work'">See Our Work</button>
+          </div>
+
+          <div style="margin-top:22px;display:flex;gap:12px;align-items:center">
+            <div class="chip">Websites</div>
+            <div class="chip">Mobile Apps</div>
+            <div class="chip">Branding</div>
+            <div class="chip">SEO</div>
+          </div>
+        </div>
+
+        <aside class="card">
+          <div class="center"><strong style="font-size:18px">Project starter</strong></div>
+          <div style="margin-top:12px;color:var(--muted);font-size:14px">Typical timeline: 2–6 weeks depending on scope. Fixed price or monthly retainer available.</div>
+
+          <div style="margin-top:14px">
+            <div class="stats">
+              <div class="stat" style="flex:1">
+                <h3>50+</h3>
+                <p>Projects delivered</p>
+              </div>
+              <div class="stat" style="flex:1">
+                <h3>95%</h3>
+                <p>Client satisfaction</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="services">
+        <h2 style="margin:14px 0 8px">Our services</h2>
+        <div class="services">
+          <div class="service card">
+            <h4>Website Development</h4>
+            <p>Create responsive, SEO-friendly websites with fast performance and clean code.</p>
+          </div>
+          <div class="service card">
+            <h4>Mobile Apps</h4>
+            <p>Flutter & native apps with smooth UX and reliable backend integrations.</p>
+          </div>
+          <div class="service card">
+            <h4>UI / UX & Branding</h4>
+            <p>Design systems, logos, and brand identities that stand out and convert.</p>
+          </div>
+          <div class="service card">
+            <h4>E‑commerce</h4>
+            <p>Shopify, WooCommerce, and custom stores built for conversions.</p>
+          </div>
+          <div class="service card">
+            <h4>SEO & Marketing</h4>
+            <p>On‑page SEO, content strategy, and performance marketing to grow traffic.</p>
+          </div>
+          <div class="service card">
+            <h4>Support & Maintenance</h4>
+            <p>Ongoing maintenance, hosting, and SLA-backed support packages.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="work">
+        <h2 style="margin:14px 0 8px">Selected work</h2>
+        <div class="portfolio">
+          <div class="project"><img src="https://via.placeholder.com/600x400?text=Project+1" alt="Project 1"><div class="meta"><strong>Startup Landing</strong><div class="muted" style="font-size:13px">Landing, conversion design</div></div></div>
+          <div class="project"><img src="https://via.placeholder.com/600x400?text=Project+2" alt="Project 2"><div class="meta"><strong>E‑commerce</strong><div class="muted" style="font-size:13px">Storefront & integrations</div></div></div>
+          <div class="project"><img src="https://via.placeholder.com/600x400?text=Project+3" alt="Project 3"><div class="meta"><strong>Mobile App UI</strong><div class="muted" style="font-size:13px">Design & prototype</div></div></div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2 style="margin:14px 0 8px">About CraftyTech.ai</h2>
+        <div class="card" style="padding:18px">
+          <p style="margin:0;color:var(--muted)">CraftyTech.ai is a creative technology studio that helps startups and growing businesses build digital products — from polished websites and high‑performance apps to complete brand systems. We focus on delivering quality work quickly and transparently. Our process mixes design thinking with pragmatic engineering so clients can ship with confidence.</p>
+
+          <div style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+            <div style="min-width:160px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px">
+              <strong>Vision</strong>
+              <div class="muted" style="font-size:13px">Make digital product development accessible to every founder.</div>
+            </div>
+            <div style="min-width:160px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px">
+              <strong>Mission</strong>
+              <div class="muted" style="font-size:13px">Design and ship reliable digital products that drive growth.</div>
+            </div>
+          </div>
+
+          <!-- Added Social Media Links -->
+          <div style="margin-top:20px">
+            <strong>Follow us:</strong>
+            <div style="margin-top:8px">
+              <a href="https://www.instagram.com/your_instagram_id" target="_blank" style="color:var(--accent);text-decoration:none;margin-right:12px">Instagram</a>
+              <a href="https://www.linkedin.com/in/your_linkedin_id" target="_blank" style="color:var(--accent);text-decoration:none">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:22px">
+        <h2 style="margin:14px 0 8px">Let's build</h2>
+        <div class="card" style="padding:18px;display:flex;gap:18px;flex-wrap:wrap">
+          <form style="flex:1;min-width:260px" onsubmit="event.preventDefault(); alert('Thanks! We\'ll contact you soon.');">
+            <label class="muted">Your name</label>
+            <input required style="width:100%;padding:10px;margin-top:6px;border-radius:10px;border:0;background:#061424;color:#e6eef6" placeholder="Asha" />
+            <label class="muted" style="margin-top:10px;display:block">Email</label>
+            <input required style="width:100%;padding:10px;margin-top:6px;border-radius:10px;border:0;background:#061424;color:#e6eef6" placeholder="hello@company.com" />
+            <label class="muted" style="margin-top:10px;display:block">Project brief</label>
+            <textarea required style="width:100%;padding:10px;margin-top:6px;border-radius:10px;border:0;background:#061424;color:#e6eef6" rows="4" placeholder="Describe your project, timeline, and budget"></textarea>
+            <div style="margin-top:10px;display:flex;gap:8px"><button class="btn primary" type="submit">Send message</button><button class="btn ghost" type="reset">Reset</button></div>
+          </form>
+
+          <div style="flex-basis:320px;min-width:260px">
+            <div style="font-weight:700">Email</div>
+            <div class="muted" style="margin-bottom:12px">info@craftytech.ai</div>
+            <div style="font-weight:700">Location</div>
+            <div class="muted" style="margin-bottom:12px">Visakhapatnam, India</div>
+            <div style="font-weight:700">Follow</div>
+            <div class="muted">Instagram • LinkedIn • Twitter</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <strong>CraftyTech.ai</strong>
+          <div class="muted">© 2025 CraftyTech.ai — All rights reserved</div>
+        </div>
+        <div class="muted">Built with care • Contact: info@craftytech.ai</div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop">↑</button>
+
+  <!-- Chatbot Placeholder -->
+  <div class="chatbot">
+    <strong>Chat with us!</strong>
+    <p>Hi there! How can we help you?</p>
+  </div>
+
+  <!-- WhatsApp Contact Button -->
+  <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button" title="Chat with us on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+  </a>
+
+  <script>
+    // Smooth Scroll for Navigation Links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Back to Top Button Functionality
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
