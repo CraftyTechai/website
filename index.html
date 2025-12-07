@@ -156,6 +156,14 @@
     .muted{color:var(--muted)}
     .chip{display:inline-block;padding:6px 10px;background:rgba(255,255,255,0.02);border-radius:999px}
     .center{text-align:center}
+
+    /* Social Media Icons */
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
@@ -205,7 +213,7 @@
           <div style="margin-top:14px">
             <div class="stats">
               <div class="stat" style="flex:1">
-                <h3>50+</h3>
+                <h3>5</h3>
                 <p>Projects delivered</p>
               </div>
               <div class="stat" style="flex:1">
@@ -271,17 +279,12 @@
               <div class="muted" style="font-size:13px">Design and ship reliable digital products that drive growth.</div>
             </div>
           </div>
-
-          <!-- Added Social Media Links -->
+<!-- Added Social Media Links -->
           <div style="margin-top:20px">
-            <strong>Follow us:</strong>
             <div style="margin-top:8px">
-              <a href="https://www.instagram.com/your_instagram_id" target="_blank" style="color:var(--accent);text-decoration:none;margin-right:12px">Instagram</a>
-              <a href="https://www.linkedin.com/in/your_linkedin_id" target="_blank" style="color:var(--accent);text-decoration:none">LinkedIn</a>
-            </div>
-          </div>
         </div>
       </section>
+
 
       <section id="contact" style="margin-top:22px">
         <h2 style="margin:14px 0 8px">Let's build</h2>
@@ -302,7 +305,14 @@
             <div style="font-weight:700">Location</div>
             <div class="muted" style="margin-bottom:12px">Visakhapatnam, India</div>
             <div style="font-weight:700">Follow</div>
-            <div class="muted">Instagram • LinkedIn • Twitter</div>
+            <div class="muted">
+              <a href="https://www.instagram.com/craftytech.ai" target="_blank" style="color:var(--accent);text-decoration:none">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon" />
+              </a> 
+              <a href="https://www.linkedin.com/in/craftytech-ai" target="_blank" style="color:var(--accent);text-decoration:none">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon" />
+              </a> 
+            </div>
           </div>
         </div>
       </section>
@@ -313,9 +323,9 @@
       <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
         <div>
           <strong>CraftyTech.ai</strong>
-          <div class="muted">© 2025 CraftyTech.ai — All rights reserved</div>
+          <div class="muted"> © 2025 CraftyTech.ai — All rights reserved</div>
         </div>
-        <div class="muted">Built with care • Contact: info@craftytech.ai</div>
+        <div class="muted"> Contact:craftytech.ai@zohomail.in</div>
       </div>
     </footer>
   </div>
@@ -323,11 +333,7 @@
   <!-- Back to Top Button -->
   <button class="back-to-top" id="backToTop">↑</button>
 
-  <!-- Chatbot Placeholder -->
-  <div class="chatbot">
-    <strong>Chat with us!</strong>
-    <p>Hi there! How can we help you?</p>
-  </div>
+
 
   <!-- WhatsApp Contact Button -->
   <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button" title="Chat with us on WhatsApp">
