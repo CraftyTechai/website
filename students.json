@@ -1,0 +1,89 @@
+[
+  {
+    "email": "alice@example.com",
+    "name": "Alice Johnson",
+    "joined": "2024-09-15",
+    "enrolled": ["Full Stack Web Development", "UI/UX Design"],
+    "progress": {"Full Stack Web Development": 65, "UI/UX Design": 40},
+    "certificates": ["HTML & CSS — Certificate (Completed)", "Intro to JavaScript — Certificate (In Progress)"]
+  },
+  
+  {
+    "email": "pcharanreddy849@gmail.com",
+    "name": "P. Charan Kumar Reddy",
+    "phone": "9346004967",
+    "joined": "2026-06-10",
+    "enrolled": ["Gen AI"],
+    "college": "Veltech University",
+    "duration": "3 Months",
+    "progress": {"Gen AI": 0},
+    "certificates": []
+  },
+  {
+    "email": "rajeshmanthi4@gmail.com",
+    "name": "Maanthi Rajesh",
+    "phone": "6281311138",
+    "joined": "2026-06-10",
+    "enrolled": ["Gen AI"],
+    "college": "Veltech University",
+    "duration": "3 Months",
+    "progress": {"Gen AI": 0},
+    "certificates": []
+  },
+  {
+    "email": "gandikota.pavan331@gmail.com",
+    "name": "G. Pavan Jaswanth",
+    "phone": "7702355872",
+    "joined": "2026-06-10",
+    "enrolled": ["Gen AI"],
+    "college": "Veltech University",
+    "duration": "3 Months",
+    "progress": {"Gen AI": 0},
+    "certificates": []
+  }
+,
+  {
+    "email": "bob@example.com",
+    "name": "Bob Martin",
+    "joined": "2025-02-10",
+    "enrolled": ["Python for Data Science"],
+    "progress": {"Python for Data Science": 80},
+    "certificates": ["Python Basics — Certificate (Completed)"]
+  }
+,
+  {
+    "email": "korladhanusrireddy@gmail.com",
+    "name": "Korla Dhanusri",
+    "joined": "2026-05-15",
+    "enrolled": ["Full Stack Web Development"],
+    "progress": {"Full Stack Web Development": 0},
+    "certificates": []
+  },
+  {
+    "email": "roshichowdary99@gmail.com",
+    "name": "Neerukonda Roshini",
+    "joined": "2026-05-15",
+    "enrolled": ["Full Stack Web Development"],
+    "progress": {"Full Stack Web Development": 0},
+    "certificates": []
+  },
+  {
+    "email": "mahathikoushik25@gmail.com",
+    "name": "Yangalasetty Mahathi Koushik",
+    "joined": "2026-05-15",
+    "enrolled": ["Full Stack Web Development"],
+    "progress": {"Full Stack Web Development": 0},
+    "certificates": []
+  }
+
+  ,
+  {
+    "email": "madhumadhuryamadhumadhurya987@gmail.com",
+    "name": "Madhu Madhurya",
+    "joined": "2026-05-10",
+    "enrolled": ["Python Programming"],
+    "progress": {"Python Programming": 0},
+    "certificates": []
+  }
+]
+

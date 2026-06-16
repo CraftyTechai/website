@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portal | CraftyTech.ai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="brand">
+        <div class="logo">CraftyTech.ai</div>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="students-portal.html" class="cta">Student Portal</a>
+        <a href="verify-certificates.html">Verify</a>
+    </nav>
+</header>
+
+<!-- Portal alert (shown after auto sign-out) -->
+<div id="portalAlert" style="display:none; max-width:960px; margin:12px auto 0; padding:0 12px;"></div>
+
+<main class="container">
+    <section class="hero">
+        <div>
+            <span class="eyebrow">Student Portal</span>
+            <h1>Welcome to the Student Portal</h1>
+            <p class="lead">Access your courses, projects, certificates, and career resources in one place.</p>
+            <div class="buttons">
+                <a href="courses.html" class="btn primary">My Courses</a>
+                <button id="signinBtn" class="btn ghost">Sign In</button>
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+<footer>
+    <div class="container">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+                <h3 style="color:#06b6d4;">CraftyTech.ai</h3>
+                <p class="muted">Student tools and career support.</p>
+            </div>
+            <div class="muted">&copy; 2026 CraftyTech.ai</div>
+        </div>
+    </div>
+</footer>
+
+<!-- Email Login Modal -->
+<div id="loginModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); align-items:center; justify-content:center; z-index:9999;"> 
+    <div style="background:#fff; color:#111; padding:20px; border-radius:8px; width:320px; max-width:90%;">
+        <h3 style="margin-top:0;">Student Sign In</h3>
+        <form id="signinForm">
+            <label for="studentEmail">Email address</label>
+            <input id="studentEmail" name="email" type="email" placeholder="you@example.com" style="width:100%; padding:8px; margin-top:8px; margin-bottom:8px; border:1px solid #ccc; border-radius:4px;" required>
+            <div id="loginError" style="color:#c00; font-size:13px; height:18px;"></div>
+            <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:12px;">
+                <button type="button" id="cancelLogin" style="padding:8px 12px; border-radius:6px; border:1px solid #ccc; background:#f4f4f4;">Cancel</button>
+                <button type="submit" style="padding:8px 12px; border-radius:6px; border:none; background:#06b6d4; color:#042;">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+        // show auto-logout message if present
+        try{
+            const portalAlert = document.getElementById('portalAlert');
+            if(sessionStorage.getItem('autoSignedOut')){
+                portalAlert.innerHTML = '<div style="background:#fff3cd;border:1px solid #ffeeba;color:#856404;padding:12px;border-radius:6px;">You were signed out for security. Please sign in again.</div>';
+                portalAlert.style.display = 'block';
+                sessionStorage.removeItem('autoSignedOut');
+                setTimeout(()=>{ portalAlert.style.display='none'; }, 6000);
+            }
+        }catch(e){}
+
+    const signinBtn = document.getElementById('signinBtn');
+    const loginModal = document.getElementById('loginModal');
+    const signinForm = document.getElementById('signinForm');
+    const cancelLogin = document.getElementById('cancelLogin');
+    const loginError = document.getElementById('loginError');
+
+    function openModal(){ loginModal.style.display = 'flex'; loginError.textContent = ''; document.getElementById('studentEmail').focus(); }
+    function closeModal(){ loginModal.style.display = 'none'; }
+
+    signinBtn.addEventListener('click', function(){
+        const saved = localStorage.getItem('studentEmail');
+        if(saved){ alert('Already signed in as ' + saved); return; }
+        openModal();
+    });
+
+        // (demo login removed)
+
+    cancelLogin.addEventListener('click', function(){ closeModal(); });
+
+    signinForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        const email = document.getElementById('studentEmail').value.trim();
+        const re = /^\S+@\S+\.\S+$/;
+        if(!re.test(email)){
+            loginError.textContent = 'Please enter a valid email address.';
+            return;
+        }
+        loginError.textContent = 'Checking...';
+        fetch('students.json', {cache: 'no-store'}).then(r=>{
+            if(!r.ok) throw new Error('Network');
+            return r.json();
+        }).then(list=>{
+            const user = list.find(u => u.email.toLowerCase() === email.toLowerCase());
+            if(!user){
+                loginError.textContent = 'No account found for that email. Contact support.';
+                return;
+            }
+            // Save matched user record and redirect to LMS
+            localStorage.setItem('studentEmail', user.email);
+            localStorage.setItem('studentData', JSON.stringify(user));
+            window.location.href = 'students-lms.html';
+        }).catch(()=>{
+            loginError.textContent = 'Unable to validate at this time. Try again later.';
+        });
+    });
+
+    const saved = localStorage.getItem('studentEmail');
+    if(saved){ signinBtn.textContent = 'Signed in: ' + saved.split('@')[0]; signinBtn.disabled = true; }
+});
+</script>
+
+</body>
+</html>

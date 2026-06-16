@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/cf9cbf3728.js" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        .exploreColor{
+            background-color: #ffffff;
+        }
+
+        @media only screen and (max-width: 688px){
+            .sliderHeader{
+                font-size: 3vh;
+            }
+
+            .sliderPara{
+                font-size: 2vh;
+            }
+
+            .sliderBtn{
+                font-size: 3vh;
+            }
+
+            .height{
+                height: 50%;
+            }
+        }
+    </style>
+
+    <title>Courses — CraftyTech AI</title>
+</head>
+<body>
+    <header class="container">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                   <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="img/logo.jpeg"
+                 alt="CraftyTech.ai Logo"
+                 style="height:50px; width:auto; margin-right:10px;">
+            <span class="fs-3 fw-bold">CraftyTech AI</span>
+        </a>
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-outline-info d-none d-md-block d-lg-none me-3 fw-bold">Register</button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-3">
+                            <a class="nav-link fw-semibold" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link fw-semibold" href="courses.html">Courses</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link fw-semibold" href="students-portal.html">Student Portal</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link fw-semibold" href="verify-certificates.html">Verify</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Slider Start -->
+        <section class="mt-5 container h-100 mb-5">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner position-relative">
+                    <div class="carousel-item active">
+                        <img src="img/cover/cover-1.jpg" class="d-block w-100 rounded" alt="cover 1">
+                            <div class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded" style="--bs-bg-opacity: .5;">
+                                <h1 class="display-2 fw-bold w-75 sliderHeader">Get Started with CraftyTech AI</h1>
+                                <p class="sliderPara">Practical courses, projects, and career support for students.</p>
+                                <button class="btn btn-primary fs-4 fw-bold sliderBtn">Explore Courses</button>
+                            </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/cover/cover-2.jpg" class="d-block w-100 rounded" alt="cover 2">
+                        <div class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded" style="--bs-bg-opacity: .5;">
+                            <h1 class="display-2 fw-bold w-75 sliderHeader">Get Started Digital Learning</h1>
+                            <p class="sliderPara">Get A Chance To Shine In Your Life</p>
+                            <button class="btn btn-primary fs-4 fw-bold sliderBtn">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/cover/cover-3.jpg" class="d-block w-100 rounded" alt="cover 3">
+                        <div class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded" style="--bs-bg-opacity: .5;">
+                            <h1 class="display-2 fw-bold w-75 sliderHeader">Get Started Digital Learning</h1>
+                            <p class="sliderPara">We Are Always Here For You</p>
+                            <button class="btn btn-primary fs-4 fw-bold sliderBtn">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev d-none d-md-block d-lg-block d-xl-block d-xxl-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next d-none d-md-block d-lg-block d-xl-block d-xxl-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <!-- Slider End -->
+    </header>
+
+    <main>
+        <!-- Courses Section Start -->
+        <section class="container-fluid d-flex justify-content-center">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center col-lg-10 col-md-11 col-sm-11">
+                <div class="mb-4 text-center">
+                    <h4 class="fw-bold">Domains & Specializations</h4>
+                    <p class="text-secondary">Explore courses across these domains:</p>
+                                        <div class="container mt-3">
+                                                <div class="row g-3">
+                                                        <!-- Domain cards -->
+                                                        <script>
+const domains = [
+ 'Full Stack Web Development','Frontend Development','Backend Development','Flutter App Development','Android App Development','iOS App Development','AI & Machine Learning','Data Science','Python Development','Java Development','MERN Stack Development','UI/UX Design','Graphic Design','Web Design','Cyber Security','Cloud Computing','DevOps','Software Testing','Digital Marketing','SEO Optimization','Social Media Marketing','Content Writing','Video Editing','Business Development','HR & Recruitment','Campus Ambassador Program','Product Management','Blockchain Development','IoT (Internet of Things)','AR/VR Development','Game Development','Embedded Systems','Robotics','Data Analytics','Prompt Engineering','Generative AI','Chatbot Development','Salesforce Development','SAP Technologies','Technical Support','IT Help Desk','Networking','Database Management','Ecommerce Development','WordPress Development','No-Code / Low-Code Development'
+];
+                                                                
+const courseImages = {
+  'Full Stack Web Development': 'img/Image/Full Stack.jpg',
+  'Frontend Development': 'img/Image/Frontend Developer.jpg',
+  'Backend Development': 'img/Image/Backend.jpg',
+  'Flutter App Development': 'img/Image/flutter.jpg',
+  'Android App Development': 'img/Image/Android.png',
+  'AI & Machine Learning': 'img/Image/AI & ML.jpg',
+  'iOS App Development': 'img/Image/iOS.jpg',
+  'Data Science': 'img/Image/Data Science.jpg',
+    'Python Development': 'img/Image/Python.png',
+    'Java Development': 'img/Image/Java.png',
+  'MERN Stack Development': 'img/Image/MERN.jpg',
+  'UI/UX Design': 'img/Image/UI&UX.jpg',
+  'Graphic Design': 'img/Image/Graphic.jpg',
+  'Web Design': 'img/Image/Web Design.jpg',
+  'Cyber Security': 'img/Image/Cyber Security.jpg',
+  'Cloud Computing': 'img/Image/Cloud Computing.jpg',
+  'DevOps': 'img/Image/Dev0ps.jpg',
+  'Software Testing': 'img/Image/Software Testing.jpg',
+  'SEO Optimization': 'img/Image/SEO.jpg',
+  'Social Media Marketing': 'img/Image/Social Media.jpg',
+  'HR & Recruitment': 'img/Image/HR & Recruitment.jpg',
+    'Campus Ambassador Program': 'img/Image/Campus.jpg',
+    'Product Management': 'img/Image/Product.jpg',
+    'IoT (Internet of Things)': 'img/Image/IoT.jpg',
+  'Digital Marketing': 'img/Image/Digital Marketing.jpg',
+  'Content Writing': 'img/Image/Content Writing.jpg',
+  'Video Editing': 'img/Image/Video Editing.jpg',
+  'Business Development': 'img/Image/Business Development.jpg',
+  'Blockchain Development': 'img/Image/Blockchain.jpg',
+  'AR/VR Development': 'img/Image/AR VR.jpg',
+  'Game Development': 'img/Image/game_dev.jpg',
+  'Embedded Systems': 'img/Image/Embedded.jpg',
+  'Robotics': 'img/Image/Robotics.jpg',
+  'Data Analytics': 'img/Image/Data Analytics.jpg',
+  'Prompt Engineering': 'img/Image/Prompt.jpg',
+  'Generative AI': 'img/Image/Gen AI.jpg',
+  'Chatbot Development': 'img/Image/ChatBot.jpg',
+  'Salesforce Development': 'img/Image/Salesforce.jpg',
+  'SAP Technologies': 'img/Image/SAP.jpg',
+  'Technical Support': 'img/Image/Technical.jpg',
+  'IT Help Desk': 'img/Image/IT Help.jpg',
+  'Networking': 'img/Image/Networking.jpg',
+  'Database Management': 'img/Image/Database.jpg',
+  'Ecommerce Development': 'img/Image/Ecommerece.jpg',
+  'WordPress Development': 'img/Image/WordPress.jpg',
+  'No-Code / Low-Code Development': 'img/Image/Nocode LowCode.jpg',
+};
+                                                                
+let html = '';
+
+domains.forEach((d) => {
+
+    const wa =
+    'https://wa.me/919182849213?text=' +
+    encodeURIComponent('I want to enroll in ' + d + ' at CraftyTech.ai');
+
+    const imageUrl =
+    courseImages[d] || 'img/image/default.jpg';
+
+    html += `
+    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card h-100 shadow-sm">
+
+            <img src="${imageUrl}"
+                 alt="${d}"
+                 class="card-img-top"
+                 style="height:220px;object-fit:cover;">
+
+            <div class="card-body">
+                <h5>${d}</h5>
+
+                <p class="text-secondary small">
+                    Practical modules and projects in ${d}.
+                </p>
+
+                <a class="btn btn-primary btn-sm"
+                   href="${wa}"
+                   target="_blank">
+                   Enroll
+                </a>
+            </div>
+
+        </div>
+    </div>`;
+});
+
+                                                                document.write(html);
+                                                                
+                                                                // Helper function to adjust color brightness
+                                                                function adjustBrightness(color, percent) {
+                                                                    const num = parseInt(color.replace("#",""), 16);
+                                                                    const amt = Math.round(2.55 * percent);
+                                                                    const R = (num >> 16) + amt;
+                                                                    const G = (num >> 8 & 0x00FF) + amt;
+                                                                    const B = (num & 0x0000FF) + amt;
+                                                                    return "#" + (0x1000000 + (R<255?R<1?0:R:255)*0x10000 +
+                                                                        (G<255?G<1?0:G:255)*0x100 + (B<255?B<1?0:B:255))
+                                                                        .toString(16).slice(1);
+                                                                }
+                                                                
+                                                                // attach simple details handlers (shows course title; replace with modal as needed)
+                                                                document.querySelectorAll('.detailsBtn').forEach(btn=>{
+                                                                    btn.addEventListener('click', function(){
+                                                                        const title = this.getAttribute('data-title');
+                                                                        alert('Course details:\n' + title + '\n\nVisit the course page or contact us for full details.');
+                                                                    });
+                                                                });
+                                                        </script>
+                                                </div>
+                                        </div>
+                </div>
+                <div class="gap-4 d-flex flex-wrap justify-content-center">
+                    
+        <!-- Explore Section Start -->
+        <section class="container mb-5 pb-5 pt-5">
+            <div class="card border rounded-0">
+                <div class="row g-0">
+                    <div class="col-md-6 col-lg-4">
+                        <img src="img/Image/pic.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-6 col-lg-8 d-flex  exploreColor">
+                        <div class="card-body px-lg-5 d-flex flex-column justify-content-center">
+                            <h1 class="fw-bold pb-lg-2">Explore CraftyTech AI Institute</h1>
+                            <p class="">Our institute is the market-leading e-learning platform. By joining our institute you can learn so many things. Nowadays e-learning is the best platform for learning. We offer you many courses, from which you can choose one or more.</p>
+                            <div class="d-flex my-md-3 my-lg-3">
+                                <div class="pe-md-3 pe-lg-5">
+                                    <h1 class="fw-bold">3.2K+</h1>
+                                    <h5>Online Course</h5>
+                                </div>
+                                <div class="pe-md-3 pe-lg-5">
+                                    <h1 class="fw-bold">600+</h1>
+                                    <h5>Expert Member</h5>
+                                </div>
+                                <div class="pe-md-3 pe-lg-5">
+                                    <h1 class="fw-bold">1K+</h1>
+                                    <h5>Rating & Review</h5>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary fw-bold px-4 py-2">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Explore Section End -->
+
+        <!-- Ready To Join Section Start -->
+        <section class="container mt-5 mb-5">
+            <div class="d-md-block d-lg-flex justify-content-between align-items-center bg-info rounded p-5 text-center text-lg-start">
+                <div class="text-white">
+                     <h1 class="fw-bold">Ready To Join?</h1>
+                        <p>We have so many courses that you can enroll in.</p>
+
+                     <a href="https://forms.gle/J79BzLjYpNtaWm716" target="_blank" class="btn btn-light mt-3">
+                             Enroll Now
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+        <!-- Ready To Join Section End -->
+
+        
+
+    
+                       <!-- Students Feedback Start -->
+<section class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">Some Students Feedback</h1>
+        <p class="text-secondary">
+            Hear what our students have to say about their learning experience with CraftyTech AI.
+        </p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Single Student Feedback -->
+        <div class="col-lg-6">
+            <div class="border rounded p-4 h-100">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                    </div>
+                </div>
+
+                <div class="py-3">
+                    <p class="text-secondary">
+                        This E-Learning platform is very good. I took a course in web development.
+                        They teach us properly. From a beginner to a professional — thanks to CraftyTech.ai.
+                    </p>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <div>
+                        <img src="img/student/student-5.jpg"
+                             class="rounded-circle"
+                             alt="Student 5"
+                             style="width:60px; height:60px; object-fit:cover;">
+                    </div>
+
+                    <p class="ps-3 text-secondary mb-0">
+                        <span class="text-dark fw-bold">Awlad Hossain</span><br>
+                        Web Developer
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Student Feedback -->
+        <div class="col-lg-6">
+            <div class="border rounded p-4 h-100">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                    </div>
+                </div>
+
+                <div class="py-3">
+                    <p class="text-secondary">
+                        This E-Learning platform is very good. I took a course in graphics design.
+                        They teach us properly. From a beginner to a professional — thanks to CraftyTech.ai.
+                    </p>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <div>
+                        <img src="img/student/student-6.jpg"
+                             class="rounded-circle"
+                             alt="Student 6"
+                             style="width:60px; height:60px; object-fit:cover;">
+                    </div>
+
+                    <p class="ps-3 text-secondary mb-0">
+                        <span class="fw-bold text-dark">Shanta Akter</span><br>
+                        Graphic Designer
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4 d-lg-none">
+        <button class="btn btn-primary fw-bold px-4 py-2">View All</button>
+    </div>
+</section>
+<!-- Students Feedback End -->
+<!-- Recognitions & Affiliations -->
+<div class="container my-5">
+    
+    <h4 class="text-center fw-bold mb-4">
+        Recognitions & Affiliations
+    </h4>
+
+    <div class="d-flex justify-content-center align-items-center flex-wrap gap-5">
+
+        <img src="img/logos/MSME.png"
+             alt="MSME"
+             style="height:280px; width:auto; object-fit:contain;">
+
+        <img src="img/logos/MCA.png"
+             alt="MCA"
+             style="height:280px; width:auto; object-fit:contain;">
+
+        <img src="img/logos/DPIIT.png"
+             alt="DPIIT"
+             style="height:280px; width:auto; object-fit:contain;">
+
+        <img src="img/logos/AICTE.png"
+             alt="AICTE"
+             style="height:280px; width:auto; object-fit:contain;">
+
+    </div>
+
+</div>
+
+        <!-- Accordion Start -->
+        <section class="container">
+            <div class="text-center mb-5">
+                <h1 class="fw-bold">Frequently Asked Questions</h1>
+                <p class="text-secondary">Some frequently asked questions answers are given below,</p>
+            </div>
+            <div class="accordion" id="accordionExample">
+                <!-- 1st Question -->
+                <div class="accordion-item my-4 border-0">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fw-bold border rounded-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What are the differences between flexbox and grid?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-secondary">
+                            The basic difference between flexbox and grid Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time.
+                        </div>
+                    </div>
+                </div>
+                <!-- 2nd Question -->
+                <div class="accordion-item my-4 border-0">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fw-bold border rounded-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            What are the differences between bootstrap and tailwind CSS?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-secondary">
+                            The main difference between TailwindCSS and Bootstrap is that Tailwind CSS is not a UI kit. Unlike UI kits such as Bootstrap, Tailwind CSS doesn't have a default theme or built-in UI components. Instead, it comes with predesigned widgets you can use to build your site from scratch.
+                        </div>
+                    </div>
+                </div>
+                <!-- 3rd Question -->
+                <div class="accordion-item my-4 border-0">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fw-bold border rounded-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            What is CSS Box Model?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-secondary">
+                            The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+                        </div>
+                    </div>
+                </div>
+                <!-- 4th Question -->
+                <div class="accordion-item my-4 border-0">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed fw-bold border rounded-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            What is a Semantic tag?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-secondary">
+                            The HTML semantics refers to the tags that provide meaning to an HTML page rather than just presentation. It makes HTML more comprehensible by better defining the different sections and layout of web pages.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Accordion End -->
+
+        
+    </main>
+
+    <!-- Footer -->
+<!-- Footer Start -->
+<footer class="bg-dark p-5">
+
+    <div class="text-white text-center mt-5">
+
+        <h1 class="fw-bold display-4">CraftyTech AI</h1>
+
+        <p class="fs-4">Hyderabad, India</p>
+
+        <p class="fs-4">
+            <a href="privacy-policy.html" class="text-white text-decoration-none">
+                Privacy Policy
+            </a>
+            |
+            <a href="terms-and-conditions.html" class="text-white text-decoration-none">
+                Terms & Conditions
+            </a>
+        </p>
+
+        <p class="fs-4">Email: hr@craftytechai.in</p>
+        <p class="fs-4">Email: support@craftytechai.in</p>
+
+    </div>
+
+
+        <!-- Social Media -->
+        <div class="text-center display-6 mb-4">
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook-square text-white px-2"></i>
+            </a>
+
+            <a href="https://twitter.com" target="_blank">
+                <i class="fa-brands fa-twitter text-white px-2"></i>
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram text-white px-2"></i>
+            </a>
+
+            <a href="https://www.linkedin.com" target="_blank">
+                <i class="fa-brands fa-linkedin text-white px-2"></i>
+            </a>
+             <p class="mt-1 mb-0 text-white">
+                 © 2026 CraftyTech AI. All Rights Reserved.
+            </p>
+        </div>
+
+    
+
+    </div>
+
+</footer>
+<!-- Footer End -->
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

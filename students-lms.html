@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student LMS | CraftyTech.ai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .lms-header { display:flex; justify-content:space-between; align-items:center; margin:24px 0; }
+    .lms-card { padding:20px; border-radius:10px; border:1px solid #e6e6e6; background:#fff; color:#111; }
+    .muted { color:#6b7280; }
+  </style>
+</head>
+<body>
+  <header class="container lms-header">
+    <div>
+      <h2>Student LMS</h2>
+      <div class="muted">CraftyTech.ai Portal</div>
+    </div>
+    <div>
+      <a href="students-portal.html" class="btn ghost">Back to Portal</a>
+      <button id="signoutBtn" class="btn primary">Sign Out</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="lms-card">
+      <h3 id="studentName">Student</h3>
+      <p id="studentEmail" class="muted"></p>
+
+      <h4 style="margin-top:16px;">Enrolled Courses</h4>
+      <div id="enrolledList" class="muted">No courses enrolled yet.</div>
+
+      <h4 style="margin-top:16px;">Certificates</h4>
+      <div id="certificatesList" class="muted">Your verified certificates will appear here.</div>
+    </section>
+  </main>
+
+  <script>
+    (function(){
+      // Prefer full student record if available
+      let studentData = null;
+      try{ studentData = JSON.parse(localStorage.getItem('studentData') || 'null'); }catch(e){ studentData = null; }
+
+      const email = localStorage.getItem('studentEmail');
+      if(!email && !studentData){
+        window.location.href = 'students-portal.html';
+        return;
+      }
+
+      function render(user){
+        document.getElementById('studentName').textContent = user.name || user.email.split('@')[0];
+        document.getElementById('studentEmail').textContent = user.email || '';
+        // Joined date
+        const joined = user.joined ? (new Date(user.joined)).toLocaleDateString() : null;
+        if(joined){
+          let joinedEl = document.getElementById('joinedDate');
+          if(!joinedEl){
+            joinedEl = document.createElement('div');
+            joinedEl.id = 'joinedDate';
+            joinedEl.style.marginTop = '8px';
+            joinedEl.className = 'muted';
+            document.querySelector('.lms-card').insertBefore(joinedEl, document.getElementById('enrolledList'));
+          }
+          joinedEl.textContent = 'Member since: ' + joined;
+        }
+
+        const enrolledEl = document.getElementById('enrolledList');
+        if(Array.isArray(user.enrolled) && user.enrolled.length){
+          // If progress data available, show progress bars per course
+          if(user.progress){
+            enrolledEl.innerHTML = '<div>' + user.enrolled.map(c=>{
+              const p = user.progress[c] || 0;
+              return `<div style="margin-bottom:10px;"><div style="font-weight:600;">${c}</div><div style="background:#e6e6e6;border-radius:8px;height:10px;overflow:hidden;margin-top:6px;"><div style="width:${p}%;height:100%;background:linear-gradient(90deg,#06b6d4,#0ea5b5);"></div></div><div class="muted" style="font-size:13px;margin-top:4px;">Progress: ${p}%</div></div>`;
+            }).join('') + '</div>';
+          } else {
+            enrolledEl.innerHTML = '<ul>' + user.enrolled.map(c=>`<li>${c}</li>`).join('') + '</ul>';
+          }
+        } else {
+          enrolledEl.textContent = 'No courses enrolled yet.';
+        }
+
+        const certsEl = document.getElementById('certificatesList');
+        if(Array.isArray(user.certificates) && user.certificates.length){
+          certsEl.innerHTML = '<ul>' + user.certificates.map(c=>`<li>${c}</li>`).join('') + '</ul>';
+        } else {
+          certsEl.textContent = 'Your verified certificates will appear here.';
+        }
+      }
+
+      if(studentData){
+        render(studentData);
+      } else {
+        // fetch students.json to match the stored email
+        fetch('students.json', {cache: 'no-store'}).then(r=>{
+          if(!r.ok) throw new Error('network');
+          return r.json();
+        }).then(list=>{
+          const user = list.find(u=>u.email.toLowerCase() === email.toLowerCase());
+          if(!user){
+            // no matching account
+            localStorage.removeItem('studentEmail');
+            window.location.href = 'students-portal.html';
+            return;
+          }
+          localStorage.setItem('studentData', JSON.stringify(user));
+          render(user);
+        }).catch(()=>{
+          // if fetch fails, show minimal info
+          document.getElementById('studentName').textContent = email.split('@')[0];
+          document.getElementById('studentEmail').textContent = email;
+        });
+      }
+
+      document.getElementById('signoutBtn').addEventListener('click', function(){
+        try{ sessionStorage.setItem('autoSignedOut','1'); }catch(e){}
+        localStorage.removeItem('studentEmail');
+        localStorage.removeItem('studentData');
+        window.location.href = 'students-portal.html';
+      });
+
+      // Auto-logout when the user leaves the LMS or returns to another page.
+      function autoLogout(){
+        try{ sessionStorage.setItem('autoSignedOut','1'); }catch(e){}
+        try{
+          localStorage.removeItem('studentEmail');
+          localStorage.removeItem('studentData');
+        }catch(e){}
+      }
+      window.addEventListener('beforeunload', autoLogout);
+      window.addEventListener('pagehide', autoLogout);
+      document.addEventListener('visibilitychange', function(){ if(document.hidden) autoLogout(); });
+    })();
+  </script>
+</body>
+</html>
