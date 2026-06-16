@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers | CraftyTech.ai</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ===== GLOBAL ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* body colors are handled by style.css for site consistency */
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ===== HERO ===== */
+    .career-hero {
+      background: linear-gradient(135deg, #061b34, #0066ff);
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .career-hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .career-hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* ===== SECTION ===== */
+    .career-section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .alt-bg {
+      background: #f4f8ff;
+    }
+
+    .career-section h2 {
+      font-size: 32px;
+      color: #0a2540;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    /* ===== GRID ===== */
+    .career-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .career-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .career-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .career-card h3 {
+      color: #0066ff;
+      margin-bottom: 10px;
+    }
+
+    .career-card p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn-primary,
+    .btn-secondary {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: #0066ff;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #0a2540;
+      color: #fff;
+    }
+
+    /* ===== FOOTER ===== */
+    .career-footer {
+      background: #061b34;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .career-hero h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="brand">
+          <div class="brand-logo-box">
+            <img src="img/logo.png" alt="CraftyTech.ai Logo" style="width: 40px; height: auto;">
+          </div>
+        <div class="brand-text">
+          <div class="brand-name">CraftyTech.ai</div>
+          <div class="brand-tagline">Digital Solutions</div>
+        </div>
+      </a>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav class="main-nav">
+        <a href="students.html" class="nav-link">Students Careers</a>
+        <a href="students-portal.html" class="nav-link">Student Portal</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="index.html" class="nav-link">Services</a>
+        <a href="carrers.html" class="nav-link">Careers</a>
+        <a href="verify-certificates.html" class="nav-link">Verify</a>
+        <a href="#contact" class="nav-link cta">Start Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="career-hero">
+    <h1>Careers at CraftyTech.ai</h1>
+    <p>Build • Learn • Grow with Real-World Experience</p>
+  </section>
+
+  <!-- STUDENT CAREERS -->
+  
+
+  <!-- PROFESSIONAL CAREERS -->
+  <section class="career-section alt-bg">
+    <h2>Professional Careers</h2>
+    <p class="section-subtitle">Join our growing tech team</p>
+
+    <div class="career-grid">
+      <div class="career-card">
+        <h3>Web Developer</h3>
+        <p>HTML, CSS, JavaScript, React, Node.js</p>
+      </div>
+
+      <div class="career-card">
+        <h3>Mobile App Developer</h3>
+        <p>Flutter / Android / iOS</p>
+      </div>
+
+      <div class="career-card">
+        <h3>Business Development Executive</h3>
+        <p>Sales, partnerships & client handling</p>
+      </div>
+
+      <div class="career-card">
+        <h3>UI/UX Designer</h3>
+        <p>Figma, UX research & product design</p>
+      </div>
+    </div>
+
+    <a href="mailto:careers@craftytech.ai" class="btn-secondary">
+      Send Resume to craftytech.ai@zohomail.in
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer container">
+    <div class="footer-flex">
+      <div>
+        <div style="font-weight: 800; font-size: 16px; color: var(--text-primary);">CraftyTech.ai</div>
+        <div class="muted" style="margin-top: 8px;">Digital Solutions.</div>
+      </div>
+      <div>
+         <div class="muted">© 2026 CraftyTech.ai — All rights reserved.</div>
+         <div class="muted" style="margin-top:4px">Visakhapatnam • India</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
