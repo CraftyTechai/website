@@ -1,493 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<title>CraftyTech Ai</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230327195509" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20230327195509">
-	<style>
-		.footer__menu { order: 1; }
-		.footer__social { order: 2; }
-		.footer__copyright { order: 3; }
-		.footer__social {
-			display: flex;
-			flex-direction: column;
-			gap: 0.75rem;
-			align-items: flex-start;
-		}
-		.footer__social-title {
-			display: inline-flex;
-			align-items: center;
-			font-size: 0.9rem;
-			font-weight: 600;
-			text-transform: uppercase;
-			letter-spacing: 0.18em;
-			opacity: 0.8;
-			color: #fff;
-		}
-		.footer__social-title:hover {
-			opacity: 1;
-		}
-		.social-list {
-			display: flex;
-			gap: 0.75rem;
-			padding: 0;
-			margin: 0;
-			list-style: none;
-		}
-		.social-link {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			width: 3rem;
-			height: 3rem;
-			border-radius: 1rem;
-			background: rgba(255, 255, 255, 0.08);
-			border: 1px solid rgba(255, 255, 255, 0.15);
-			color: #ffffff;
-			transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
-		}
-		.social-link:hover {
-			transform: translateY(-2px);
-			background: linear-gradient(135deg, rgba(110, 82, 255, 0.95), rgba(252, 89, 127, 0.95));
-			box-shadow: 0 16px 30px rgba(34, 54, 99, 0.18);
-		}
-		.social-link svg {
-			width: 1.4rem;
-			height: 1.4rem;
-			fill: currentColor;
-		}
-		.leadership-messages {
-			margin-top: 4rem;
-		}
-		.leadership-messages__grid {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 1.5rem;
-		}
-		.message-card {
-			flex: 1 1 calc(50% - 1.5rem);
-			min-width: 18rem;
-			padding: 1.5rem;
-			border-radius: 1.5rem;
-			background: rgba(255, 255, 255, 0.05);
-			border: 1px solid rgba(255, 255, 255, 0.12);
-		}
-		.message-card__title {
-			font-size: 1.15rem;
-			font-weight: 700;
-			margin-bottom: 0.5rem;
-		}
-		.message-card__role {
-			font-size: 0.9rem;
-			letter-spacing: 0.14em;
-			text-transform: uppercase;
-			margin-bottom: 1rem;
-			color: rgba(255, 255, 255, 0.72);
-		}
-		.message-card p {
-			line-height: 1.75;
-			color: rgba(255, 255, 255, 0.88);
-		}
-		@media (max-width: 860px) {
-			.message-card {
-				flex: 1 1 100%;
-			}
-		}
-		@media (max-width: 640px) {
-			.footer__wrapper {
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 1.5rem;
-			}
-			.footer__social {
-				width: 100%;
-			}
-		}
-		
-	</style>
-	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CraftyTech AI — Software, Product & AI Engineering, Hyderabad</title>
+<meta name="description" content="CraftyTech AI builds websites, mobile apps, and AI-powered products for growing businesses, and trains the next generation of engineers through hands-on courses and internships.">
+<link rel="icon" href="img/favicon.ico">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-	<div class="preload-bg"></div>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="img/logo.png" alt="CraftyTech AI logo">
+      <span class="brand-word">CraftyTech<span>AI</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="courses.html">Courses</a>
+      <a href="careers.html">Careers</a>
+      <a href="contacts.html" class="cta">Start a project</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</header>
 
-	<div class="wrapper">
-		<header class="header">
-			<div class="header__container">
-				<div class="header__wrapper">
-					<a class="header__logo" href="index.html"><picture><source srcset="img/logo.png" type="image/png"><img src="img/logo.png" alt="CraftyTech Ai logo"></picture></a>
-					<nav class="header__menu menu">
-						<ul class="menu__items">
-							<li class="menu__item"><a href="index.html">about us.</a></li>
-							<li class="menu__item"><a href="careers.html">careers.</a></li>
-							<li class="menu__item"><a href="contacts.html">contacts.</a></li>
-			
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
-		<main class="home">
-			<div class="home__container">
-				<div class="home__wrapper">
+<main>
 
-					<!-- //=== welcome = section ================================================================================================== -->
-					<section class="welcome">
-						<div id="preload-text-position-holder" class="welcome__title"><span class="text_thin">welcome to
-								</span><span class="text-accent_violet">CRAFTYTECH AI</span></div>
-							<div id="preload-text-original" class="welcome__title"><span class="text_thin">welcome to </span><span class="text-accent_violet">CRAFTYTECH AI</span></div>
-						<div class="welcome__content media-block media-block_animated">
-							<div class="media-block__row">
-								<div class="media-block__text text_grey _text-anim-origin">Digital</div>
-								<div class="media-block__text text_grey _animate-appear media-block__animate-text media-block__animate-text_r-l">
-									Digital</div>
-								<div class="media-block__media _animate-appear _img-anim-hidden">
-								<picture>
-									<source srcset="img/home/welcome/media-1.webp" type="image/webp">
-									<img src="img/home/welcome/media-1.webp" alt="CraftyTech Ai digital preview">
-								</picture>
-							</div>
-							</div>
-							<div class="media-block__row">
-								<div class="media-block__media _animate-appear _img-anim-hidden">
-								<picture>
-									<source srcset="img/home/welcome/media-2.webp" type="image/webp">
-									<img src="img/home/welcome/media-2.webp" alt="CraftyTech Ai solutions preview">
-								</picture>
-							</div>
-								<div class="media-block__text text_grey _text-anim-origin">solutions</div>
-								<div class="media-block__text text_grey _animate-appear media-block__animate-text media-block__animate-text_l-r">
-									solutions</div>
-							</div>
-							<div class="media-block__row">
-								<div class="media-block__text text_grey _text-anim-origin">COMPANY</div>
-								<div class="media-block__text text_grey _animate-appear media-block__animate-text media-block__animate-text_r-l">
-									COMPANY
-								</div>
-								<div class="media-block__media _animate-appear _img-anim-hidden">
-								<video muted autoplay loop playsinline preload="auto">
-									<source src="img/home/welcome/media-3.mp4" type="video/mp4">
-									Your browser does not support the video tag.
-								</video>
-							</div>
-							</div>
-						</div>
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="reveal is-visible">
+        <div class="eyebrow">Software · AI · Talent</div>
+        <h1>We build the systems your business runs on<span class="text-copper">.</span></h1>
+        <p class="lead">CraftyTech AI is a Hyderabad-based engineering studio. We design and ship websites, mobile apps, cloud infrastructure, and AI-driven products for clients — and train the engineers who'll build tomorrow's through our courses and internship programs.</p>
+        <div class="hero__actions">
+          <a href="contacts.html" class="btn primary">Start a project</a>
+          <a href="courses.html" class="btn outline">Explore courses</a>
+        </div>
+      </div>
+      <div class="terminal reveal is-visible">
+        <div class="terminal__bar">
+          <span class="terminal__dot"></span><span class="terminal__dot"></span><span class="terminal__dot"></span>
+          <span class="terminal__title">craftytech / status</span>
+        </div>
+        <div class="terminal__body">
+          <div class="terminal__line"><span>company</span><b>CraftyTech AI</b></div>
+          <div class="terminal__line"><span>headquarters</span><b>Hyderabad, India</b></div>
+          <div class="terminal__line"><span>focus</span><b>Web · Mobile · Cloud · AI</b></div>
+          <div class="terminal__line"><span>learning arm</span><b>Courses · Internships · LMS</b></div>
+          <div class="terminal__line"><span>status</span><b class="terminal__ok">hiring &amp; accepting projects</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-						<div class="welcome__goals goals block-cross-out _glass-blured">
-							<div class="goals__title text_grey">We make your goals a reality with our <span class="text-accent_aqua">software
-									systems</span></div>
-								<div class="goals__description">CraftyTech Ai provides technology solutions to optimize your business<span class="text-accent_orange">/</span></div>
-						</div>
+  <div class="container"><div class="divider"></div></div>
 
-					</section>
+  <!-- ================= WHAT WE OFFER ================= -->
+  <section class="block" id="services">
+    <div class="container">
+      <div class="trace">Capabilities</div>
+      <div class="section-head">
+        <h2>What we <span class="text-teal">offer</span></h2>
+        <p class="lead">Nine practice areas, one accountable team — from first sketch to production support.</p>
+      </div>
+      <div class="grid cols-3">
+        <div class="bcard reveal">
+          <span class="idx">01 · Web</span>
+          <h3>Website Development</h3>
+          <p class="muted">Responsive, SEO-optimized websites built for speed and conversion using modern frameworks.</p>
+        </div>
+        <div class="bcard reveal">
+          <span class="idx">02 · Mobile</span>
+          <h3>Mobile Applications</h3>
+          <p class="muted">Cross-platform and native apps engineered for smooth UX and reliable performance in production.</p>
+        </div>
+        <div class="bcard reveal">
+          <span class="idx">03 · Product</span>
+          <h3>UI/UX &amp; Branding</h3>
+          <p class="muted">Cohesive design systems, identity, and interfaces that build trust with your users from screen one.</p>
+        </div>
+        <div class="bcard reveal">
+          <span class="idx">04 · Commerce</span>
+          <h3>E-commerce Solutions</h3>
+          <p class="muted">Custom and platform-based storefronts engineered to maximize sales and streamline operations.</p>
+        </div>
+        <div class="bcard reveal">
+          <span class="idx">05 · Growth</span>
+          <h3>SEO &amp; Growth Marketing</h3>
+          <p class="muted">Data-driven technical SEO and content strategy to drive organic traffic that converts.</p>
+        </div>
+        <div class="bcard reveal">
+          <span class="idx">06 · AI</span>
+          <h3>AI-Powered Products</h3>
+          <p class="muted">Generative AI features, automation, and applied ML built into real products, not demos.</p>
+        </div>
+        <div class="bcard reveal">
+          <span class="idx">07 · Cloud</span>
+          <h3>Cloud Solutions</h3>
+          <p class="muted">Architecture and setup on AWS and other providers — built to scale with your business, not against it.</p>
+        </div>
+        <div class="bcard reveal">
+          <span class="idx">08 · Cloud</span>
+          <h3>Cloud Cost Optimization</h3>
+          <p class="muted">Audit and right-size your infrastructure spend — reserved capacity, autoscaling, and cutting idle waste.</p>
+        </div>
+        <div class="bcard reveal">
+          <span class="idx">09 · Cloud</span>
+          <h3>Cloud Deployment &amp; Maintenance</h3>
+          <p class="muted">CI/CD pipelines, monitoring, and ongoing infrastructure support so releases stay smooth and systems stay up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-					<!-- //=== moving-text = section ============================================================================================ -->
-					<section class="moving-text">
-					<div style="text-align: center; padding: 40px 0; font-size: 48px; font-weight: bold; color: rgba(255,255,255,0.1); letter-spacing: 8px; overflow: hidden;">
-						<div style="animation: slide-left 20s linear infinite; display: inline-block; white-space: nowrap;">
-							CraftyTech Ai  • CraftyTech Ai  • CraftyTech Ai  •CraftyTech Ai  • CraftyTech Ai  • CraftyTech Ai  • CraftyTech Ai  • CraftyTech Ai
-						</div>
-					</div>
-					<style>
-						@keyframes slide-left {
-							0% { transform: translateX(0); }
-							100% { transform: translateX(-50%); }
-						}
-					</style>
-					
-					
-					<div class="astronaut__container">
-						<div class="astronaut rellax" data-rellax-speed="-8">
-							<picture>
-								<source srcset="img/home/astronaut.webp" type="image/webp">
-								<img src="img/home/astronaut.png" alt="Astronaut illustration">
-							</picture>
-						</div>
-					</div>
-					<!-- //=== what-we-offer = section ============================================================================================ -->
-					<section class="what-we-offer">
-						<div class="what-we-offer__title title">what we <span class="text_grey">offer</span><span class="text-accent_orange">/</span>
-						</div>
-						<div class="what-we-offer__content">
-							<div class="what-we-offer__column">
-								<div class="what-we-offer__card offer-cadr block-cross-out">
-										<div class="offer-cadr__title">Website Development</div>
-										<div class="offer-cadr__text">Responsive, SEO-optimized websites built for speed and conversion using modern frameworks.</div>
-									</div>
-									<div class="what-we-offer__card offer-cadr block-cross-out">
-										<div class="offer-cadr__title">Mobile Applications</div>
-										<div class="offer-cadr__text">Cross-platform Flutter & native apps providing buttery-smooth UX and reliable performance.</div>
-									</div>
-									<div class="what-we-offer__card offer-cadr block-cross-out">
-										<div class="offer-cadr__title">UI / UX & Branding</div>
-										<div class="offer-cadr__text">Cohesive design systems, memorable logos, and user-centric interfaces that build trust.</div>
-									</div>
-								</div>
-								<div class="what-we-offer__column">
-									<div class="what-we-offer__card offer-cadr block-cross-out">
-										<div class="offer-cadr__title">E-commerce Solutions</div>
-										<div class="offer-cadr__text">Shopify and custom storefronts engineered to maximize sales and streamline operations.</div>
-									</div>
-									<div class="what-we-offer__card offer-cadr block-cross-out">
-										<div class="offer-cadr__title">SEO & Growth Marketing</div>
-										<div class="offer-cadr__text">Data-driven strategies including technical SEO and content planning to drive organic traffic.</div>
-									</div>
-									<div class="what-we-offer__card offer-cadr block-cross-out">
-										<div class="offer-cadr__title">Support & Evolution</div>
-										<div class="offer-cadr__text">Reliable hosting, proactive maintenance, and iterative improvements backed by expert support.</div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="partners__title title">who we <span class="text_grey">partner with</span><span class="text-accent_orange">/</span>
-						</div>
-						<div class="partners__cards">
-							<a class="partners__card card-partner" href="/" target="_blank">
-								<div class="card-partner__wrapper block-cross-in-link">
-									<span class="block-cross-in-link__left-elements"></span>
-									<span class="block-cross-in-link__right-elements"></span>
-									<picture>
-										<source srcset="img/home/partners/partner_logo_1.webp" type="image/webp">
-										<img src="img/home/partners/partner_logo_1.png" alt="Changelly logo">
-									</picture>
-								</div>
-							</a>
-							<a class="partners__card card-partner" href="/" target="_blank">
-								<div class="card-partner__wrapper block-cross-in-link">
-									<span class="block-cross-in-link__left-elements"></span>
-									<span class="block-cross-in-link__right-elements"></span>
-									<picture>
-										<source srcset="img/home/partners/partner_logo_2.webp" type="image/webp">
-										<img src="img/home/partners/partner_logo_2.png" alt="MoonPay logo">
-									</picture>
-								</div>
-							</a>
-							<a class="partners__card card-partner" href="/" target="_blank">
-								<div class="card-partner__wrapper block-cross-in-link">
-									<span class="block-cross-in-link__left-elements"></span>
-									<span class="block-cross-in-link__right-elements"></span>
-									<picture>
-										<source srcset="img/home/partners/partner_logo_3.webp" type="image/webp">
-										<img src="img/home/partners/partner_logo_3.png" alt="Simplex logo">
-									</picture>
-								</div>
-							</a>
-						</div>
-					</section>
-					<section class="moving-text">
-					<div style="text-align: center; padding: 40px 0; font-size: 48px; font-weight: bold; color: rgba(255,255,255,0.1); letter-spacing: 8px; overflow: hidden;">
-						<div style="animation: slide-left 20s linear infinite; display: inline-block; white-space: nowrap;">
-							CraftyTech Ai  • CraftyTech Ai  • CraftyTech Ai  •CraftyTech Ai  • CraftyTech Ai  • CraftyTech Ai  • CraftyTech Ai  • CraftyTech Ai
-						</div>
-					</div>
-					<style>
-						@keyframes slide-left {
-							0% { transform: translateX(0); }
-							100% { transform: translateX(-50%); }
-						}
-					</style>
+  <!-- ================= STATS ================= -->
+  <section class="block" style="padding-top:0;">
+    <div class="container">
+      <div class="stats-strip reveal">
+        <div class="stat"><b>9</b><span>Service Lines</span></div>
+        <div class="stat"><b>5+</b><span>Live Courses</span></div>
+        <div class="stat"><b>Hyderabad</b><span>HQ</span></div>
+        <div class="stat"><b>24–48h</b><span>First Response</span></div>
+      </div>
+    </div>
+  </section>
 
-					<!--//========== how-we-work = section =========================-->
+  <!-- ================= HOW WE WORK ================= -->
+  <section class="block">
+    <div class="container">
+      <div class="trace">Process</div>
+      <div class="grid cols-2" style="align-items:center; gap:56px;">
+        <div class="reveal">
+          <h2>How we <span class="text-copper">work</span></h2>
+          <p class="lead">No black boxes. You always know what stage your project is at and who owns it.</p>
+          <div class="grid" style="gap:14px; margin-top:24px;">
+            <div class="row-card" style="margin-bottom:0;">
+              <div><div class="row-card__title">Discover &amp; scope</div><div class="row-card__meta">Requirements, timeline, budget</div></div>
+              <span class="pill">Week 1</span>
+            </div>
+            <div class="row-card" style="margin-bottom:0;">
+              <div><div class="row-card__title">Design &amp; build</div><div class="row-card__meta">Iterative delivery, weekly demos</div></div>
+              <span class="pill">Sprints</span>
+            </div>
+            <div class="row-card" style="margin-bottom:0;">
+              <div><div class="row-card__title">Ship &amp; support</div><div class="row-card__meta">Launch, monitor, iterate</div></div>
+              <span class="pill">Ongoing</span>
+            </div>
+          </div>
+        </div>
+        <div class="bcard reveal">
+          <h3>Why teams choose us</h3>
+          <p class="muted" style="margin-bottom:20px;">You gain control over your workflow, not the other way around.</p>
+          <ul style="color:var(--text-soft); padding-left:1.2em; margin:0;">
+            <li style="margin-bottom:10px;">Direct access to the engineers building your product</li>
+            <li style="margin-bottom:10px;">Flexible engagement — fixed scope or embedded team</li>
+            <li style="margin-bottom:10px;">Post-launch support and iteration built into every plan</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-					<section class="how-we-work">
-						<div class="how-we-work__title title">how we <span class="text_grey">work</span><span class="text-accent_orange">/</span>
-						</div>
-						<div class="how-we-work__list-wrapper block-cross-out">
-							<ul class="how-we-work__list triangeled-list">
-								<li class="triangeled-list__item">You gain control over your workflow, not the other way around</li>
-								<li class="triangeled-list__item">You bring your skills to exciting, challenging tasks and develop
-									yourself professionally</li>
-								<li class="triangeled-list__item">You choose whether to work flexible hours, a hybrid schedule, or a
-									completely remote</li>
-							</ul>
-						</div>
+  <!-- ================= CTA ================= -->
+  <section class="block">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div>
+          <div class="eyebrow" style="color:var(--copper-bright);">Careers</div>
+          <h2>We're hiring engineers, designers &amp; more.</h2>
+          <p class="muted" style="margin:10px 0 0;">See open roles and what it's like to work with us.</p>
+        </div>
+        <a href="careers.html" class="btn primary">See open roles</a>
+      </div>
+    </div>
+  </section>
 
-						<div class="how-we-work__content media-block">
-							<div class="media-block__emoji"></div>
-							<div class="media-block__row">
-								<div class="media-block__text">Design with</div>
-								<div class="media-block__media media-block__media">
-									<picture>
-										<source srcset="img/home/how-we-work/meeting.webp" type="image/webp">
-										<img src="img/home/how-we-work/meeting.jpg" alt="Meeting scene">
-									</picture>
-								</div>
-							</div>
-							<div class="media-block__row">
-								<div class="media-block__media media-block__media_tall">
-									<picture>
-										<source srcset="img/home/how-we-work/team.webp" type="image/webp">
-										<img src="img/home/how-we-work/team.jpg" alt="Team collaboration">
-									</picture>
-								</div>
-								<div class="media-block__text">
-									<div class="media-block__row">
-										<div class="media-block__text text_grey">intelligence,</div>
-									</div>
-									<div class="media-block__row">
-										<div class="media-block__text text_grey">deliver &nbsp with</div>
-									</div>
-									<div class="media-block__row">
-										<div class="media-block__text text_grey">love</div>
-										<div class="media-block__media media-block__media">
-											<video muted autoplay loop playsinline preload="auto">
-												<source src="img/home/how-we-work/new-year.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					
+</main>
 
-					
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="brand" style="margin-bottom:14px;">
+          <img src="img/logo.png" alt="CraftyTech AI logo">
+          <span class="brand-word">CraftyTech<span>AI</span></span>
+        </a>
+        <p class="muted">Software, product, and AI engineering — plus the courses and internships that train tomorrow's engineers. Hyderabad, India.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="careers.html">Careers</a>
+        <a href="contacts.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Learning</h4>
+        <a href="courses.html">Courses</a>
+        <a href="students.html">For Students</a>
+        <a href="students-portal.html">Student Portal</a>
+        <a href="verify-certificates.html">Verify Certificate</a>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="muted">© <span data-year></span> CraftyTech AI. All rights reserved.</div>
+      <ul class="social-list">
+        <li><a href="https://www.linkedin.com/company/craftytech-ai" class="social-link" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.94 21.5H2.5V8.5h4.44v13zm-2.22-15a2.56 2.56 0 112.56-2.56 2.56 2.56 0 01-2.56 2.56zm17.28 15h-4.44v-6.95c0-1.66-.03-3.8-2.32-3.8-2.33 0-2.69 1.82-2.69 3.7v7.05H9.98V8.5h4.26v1.82h.06c.59-1.12 2.03-2.3 4.18-2.3 4.47 0 5.3 2.95 5.3 6.78v8.7z"/></svg></a></li>
+        <li><a href="https://www.instagram.com/craftytech_ai" class="social-link" target="_blank" rel="noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.2a4.8 4.8 0 104.8 4.8A4.81 4.81 0 0012 7.2zm0 7.92a3.12 3.12 0 113.12-3.12A3.13 3.13 0 0112 15.12zm5.04-8.58a1.12 1.12 0 11-1.12 1.12 1.12 1.12 0 011.12-1.12zM12 5.4c3.1 0 3.48.01 4.7.07 1.13.05 1.74.24 2.15.4a3.92 3.92 0 011.42.92 3.92 3.92 0 01.92 1.41c.16.41.35 1.02.4 2.15.06 1.22.07 1.6.07 4.7s-.01 3.48-.07 4.7c-.05 1.13-.24 1.74-.4 2.15a3.92 3.92 0 01-.92 1.42 3.92 3.92 0 01-1.41.92c-.41.16-1.02.35-2.15.4-1.22.06-1.6.07-4.7.07s-3.48-.01-4.7-.07c-1.13-.05-1.74-.24-2.15-.4a3.92 3.92 0 01-1.42-.92 3.92 3.92 0 01-.92-1.41c-.16-.41-.35-1.02-.4-2.15-.06-1.22-.07-1.6-.07-4.7s.01-3.48.07-4.7c.05-1.13.24-1.74.4-2.15a3.92 3.92 0 01.92-1.42 3.92 3.92 0 011.41-.92c.41-.16 1.02-.35 2.15-.4C8.52 5.41 8.9 5.4 12 5.4zm0-1.55C8.82 3.85 8.4 3.86 7.15 3.92 5.86 3.98 4.93 4.2 4.17 4.45a5.47 5.47 0 00-1.94 1.16 5.47 5.47 0 00-1.16 1.94C.64 8.8.42 9.73.36 11.02.3 12.27.3 12.69.3 16.87s0 4.6.06 5.85c.06 1.29.28 2.22.53 2.98a5.47 5.47 0 001.16 1.94 5.47 5.47 0 001.94 1.16c.76.25 1.69.47 2.98.53 1.25.06 1.67.06 5.85.06s4.6 0 5.85-.06c1.29-.06 2.22-.28 2.98-.53a5.47 5.47 0 001.94-1.16 5.47 5.47 0 001.16-1.94c.25-.76.47-1.69.53-2.98.06-1.25.06-1.67.06-5.85s0-4.6-.06-5.85c-.06-1.29-.28-2.22-.53-2.98a5.47 5.47 0 00-1.16-1.94 5.47 5.47 0 00-1.94-1.16c-.76-.25-1.69-.47-2.98-.53C15.6 3.85 15.18 3.85 12 3.85z"/></svg></a></li>
+        <li><a href="https://x.com/craftytech_ai" class="social-link" target="_blank" rel="noreferrer" aria-label="X"><svg viewBox="0 0 24 24"><path d="M21.71 6.29a1 1 0 00-1.18-.28l-6.63 2.7-2.7-2.7a1 1 0 00-1.42 1.42l2.7 2.7-6.7 2.72a1 1 0 00.28 1.89l8.21-1.82 2.7 2.7a1 1 0 001.42-1.42l-2.7-2.7 6.63-2.7a1 1 0 00.28-1.72z"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 
-						<div class="who-we-are__list-wrapper block-cross-out">
-							<ul class="who-we-are__list triangeled-list">
-								<li class="triangeled-list__item">Technical: Platform, Web, Mobile, QA, Devops, Project Managers</li>
-								<li class="triangeled-list__item">Operations: Customer, Finance & Technical Support, AML/KYC</li>
-								<li class="triangeled-list__item">Marketing: PR & SMM, Community, SEO/ASO, Affiliate, CRM</li>
-								<li class="triangeled-list__item">Product: Product Managers, UI/UX Designers, Analytics</li>
-								<li class="triangeled-list__item">Business Development: Sales & Key Account Managers</li>
-							</ul>
-						</div>
-					</section>
-
-					<!--//========== what-we-say = section =========================-->
-					<section class="what-we-say">
-						<div class="what-we-say__title title">what <span class="text_grey">we say</span><span class="text-accent_orange">/</span>
-						</div>
-
-								
-				<section class="leadership-messages">
-					<div class="what-we-say__title title">leadership <span class="text_grey">messages</span><span class="text-accent_orange">/</span>
-					</div>
-					<div class="leadership-messages__grid">
-						<article class="message-card block-cross-out">
-							<div class="message-card__title">Pathivada Bhargava Krishna</div>
-							<div class="message-card__role">Founder & CEO</div>
-							<p>As CEO, I’m proud of our team’s ability to deliver reliable digital solutions that create lasting value for clients. We build with clarity, trust, and innovation at the core of every project.</p>
-						</article>
-						<article class="message-card block-cross-out">
-							<div class="message-card__title">Lavanya</div>
-							<div class="message-card__role">Co-Founder</div>
-							<p>Our company’s growth is driven by teamwork, creativity, and a strong belief in long-term partnerships. Every product we ship is designed to solve real challenges and move our clients forward.</p>
-						</article>
-						<article class="message-card block-cross-out">
-							<div class="message-card__title">Shayanaa P.</div>
-							<div class="message-card__role">HR Manager</div>
-							<p>We create a culture where people feel supported, heard, and empowered to grow. Hiring the right talent and nurturing every employee’s career is how we keep CraftyTech Ai strong and resilient.</p>
-						</article>
-						<article class="message-card block-cross-out">
-							<div class="message-card__title">Harsha Reddy</div>
-							<div class="message-card__role">Project Manager</div>
-							<p>Strong planning and clear coordination keep our teams aligned and projects on schedule. I focus on delivering quality outcomes while making sure every stakeholder is heard.</p>
-						</article>
-					</div>
-				</section>
-					<!--//========== our-jobs-link = section =========================-->
-					<section class="our-jobs-link">
-						<a href="careers.html" class="animated-link">
-							<!-- <a href="/careers/" class="animated-link"> -->
-
-							<div class="animated-link__wrapper animated-link__wrapper_rotate">
-								<span class="animated-link__text animated-link__text_outlined">see our job listings</span>
-								<span class="animated-link__append animated-link__append_outlined text-accent_violet">></span>
-							</div>
-							<div class="animated-link__wrapper">
-								<span class="animated-link__text">see our job listings</span>
-								<span class="animated-link__append text-accent_violet">></span>
-							</div>
-						</a>
-					</section>
-
-				</div>
-			</div>
-
-		</main>
-		<footer class="footer">
-			<div class="footer__container">
-				<div class="footer__wrapper">
-					<nav class="footer__menu menu-footer">
-						<ul class="menu-footer__items">
-							<li class="menu-footer__item"><a href="index.html">about us.</a></li>
-							<li class="menu-footer__item"><a href="careers.html">careers.</a></li>
-							<li class="menu-footer__item"><a href="contacts.html">contacts.</a></li>
-							<li class="menu-footer__item"><a href="privacy-policy.html">privacy policy.</a></li>
-							<li class="menu-footer__item"><a href="terms-and-conditions.html">terms & conditions.</a></li>
-						</ul>
-					</nav>
-					<div class="footer__social">
-						<a href="https://www.linkedin.com/company/craftytech-ai" class="footer__social-title" target="_blank" rel="noreferrer">follow us</a>
-						<ul class="social-list">
-							<li>
-								<a href="https://www.linkedin.com/company/craftytech-ai" class="social-link" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-									<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 21.5H2.5V8.5h4.44v13zm-2.22-15a2.56 2.56 0 112.56-2.56 2.56 2.56 0 01-2.56 2.56zm17.28 15h-4.44v-6.95c0-1.66-.03-3.8-2.32-3.8-2.33 0-2.69 1.82-2.69 3.7v7.05H9.98V8.5h4.26v1.82h.06c.59-1.12 2.03-2.3 4.18-2.3 4.47 0 5.3 2.95 5.3 6.78v8.7z"/></svg>
-								</a>
-							</li>
-							<li>
-								<a href="https://www.instagram.com/craftytech_ai" class="social-link" target="_blank" rel="noreferrer" aria-label="Instagram">
-									<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2a4.8 4.8 0 104.8 4.8A4.81 4.81 0 0012 7.2zm0 7.92a3.12 3.12 0 113.12-3.12A3.13 3.13 0 0112 15.12zm5.04-8.58a1.12 1.12 0 11-1.12 1.12 1.12 1.12 0 011.12-1.12zM12 5.4c3.1 0 3.48.01 4.7.07 1.13.05 1.74.24 2.15.4a3.92 3.92 0 011.42.92 3.92 3.92 0 01.92 1.41c.16.41.35 1.02.4 2.15.06 1.22.07 1.6.07 4.7s-.01 3.48-.07 4.7c-.05 1.13-.24 1.74-.4 2.15a3.92 3.92 0 01-.92 1.42 3.92 3.92 0 01-1.41.92c-.41.16-1.02.35-2.15.4-1.22.06-1.6.07-4.7.07s-3.48-.01-4.7-.07c-1.13-.05-1.74-.24-2.15-.4a3.92 3.92 0 01-1.42-.92 3.92 3.92 0 01-.92-1.41c-.16-.41-.35-1.02-.4-2.15-.06-1.22-.07-1.6-.07-4.7s.01-3.48.07-4.7c.05-1.13.24-1.74.4-2.15a3.92 3.92 0 01.92-1.42 3.92 3.92 0 011.41-.92c.41-.16 1.02-.35 2.15-.4C8.52 5.41 8.9 5.4 12 5.4zm0-1.55C8.82 3.85 8.4 3.86 7.15 3.92 5.86 3.98 4.93 4.2 4.17 4.45a5.47 5.47 0 00-1.94 1.16 5.47 5.47 0 00-1.16 1.94C.64 8.8.42 9.73.36 11.02.3 12.27.3 12.69.3 16.87s0 4.6.06 5.85c.06 1.29.28 2.22.53 2.98a5.47 5.47 0 001.16 1.94 5.47 5.47 0 001.94 1.16c.76.25 1.69.47 2.98.53 1.25.06 1.67.06 5.85.06s4.6 0 5.85-.06c1.29-.06 2.22-.28 2.98-.53a5.47 5.47 0 001.94-1.16 5.47 5.47 0 001.16-1.94c.25-.76.47-1.69.53-2.98.06-1.25.06-1.67.06-5.85s0-4.6-.06-5.85c-.06-1.29-.28-2.22-.53-2.98a5.47 5.47 0 00-1.16-1.94 5.47 5.47 0 00-1.94-1.16c-.76-.25-1.69-.47-2.98-.53C15.6 3.85 15.18 3.85 12 3.85z"/></svg>
-								</a>
-							</li>
-							<li>
-								<a href="https://x.com/craftytech_ai" class="social-link" target="_blank" rel="noreferrer" aria-label="X">
-									<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.71 6.29a1 1 0 00-1.18-.28l-6.63 2.7-2.7-2.7a1 1 0 00-1.42 1.42l2.7 2.7-6.7 2.72a1 1 0 00.28 1.89l8.21-1.82 2.7 2.7a1 1 0 001.42-1.42l-2.7-2.7 6.63-2.7a1 1 0 00.28-1.72z"/></svg>
-								</a>
-							</li>
-						</ul>
-					</div>
-						<div class="footer__copyright">© 2026 CraftyTech Ai<br>Developed by Pathivada Bhargava Krishna</div>
-				</div>
-			</div>
-		</footer>
-	</div>
-	<div id="jobs-popup" aria-hidden="true" class="popup jobs-popup">
-		<div class="popup__wrapper">
-			<div class="popup__container">
-				<div class="popup__content">
-					<div class="button-wrapper">
-						<button data-close type="button" class="popup__close">back</button>
-						<div class="animated-line"></div>
-					</div>
-
-					<div class="popup__title">Backend <span class="text_grey">Developers</span><span class="text-accent_orange">/</span></div>
-					<div class="popup__text-wrapper block-cross-out">
-						<div class="popup__text text-popup">
-							<div class="text-popup__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex corrupti
-								incidunt modi ipsa totam culpa numquam fuga nisi nihil quam voluptas, doloremque reprehenderit odio qui.
-							</div>
-							<ul class="text-popup__features triangeled-list">
-								<li class="triangeled-list__item">The team uses: <br>Lorem, ipsum, dolor, sit amet.</li>
-								<li class="triangeled-list__item">Primary responsibilities: <br>Lorem, amet, dolor sit.</li>
-							</ul>
-						</div>
-					</div>
-
-					<!-- <a href="#" class="position-button">
-					<div class="position-button__title">Backend Developer (Node.js)</div>
-					<div class="position-button__link">view</div>
-					<picture><source srcset="img/careers/team-bg.webp" type="image/webp"><img class="position-button__bg" src="img/careers/team-bg.jpg" alt=""></picture>
-				</a> -->
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20230327195509"></script>
-	<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js?_v=20230327195509"></script>
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12?_v=20230327195509"></script>
-
-	<script src="js/app.min.js?_v=20230327195509"></script>
+<script src="assets/js/main.js"></script>
 </body>
-
 </html>
