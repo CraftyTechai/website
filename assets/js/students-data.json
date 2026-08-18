@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Aisha Rao",
+    "course": "Full Stack Development",
+    "avatar": "https://via.placeholder.com/96?text=A",
+    "graduationYear": 2024,
+    "bio": "Built multiple MERN apps and completed an internship at a startup."
+  },
+  {
+    "id": 2,
+    "name": "Rahul Menon",
+    "course": "Data Science",
+    "avatar": "https://via.placeholder.com/96?text=R",
+    "graduationYear": 2023,
+    "bio": "Specializes in ML pipelines and visualization."
+  },
+  {
+    "id": 3,
+    "name": "Sara Iqbal",
+    "course": "UI/UX",
+    "avatar": "https://via.placeholder.com/96?text=S",
+    "graduationYear": 2025,
+    "bio": "Design intern with a focus on accessible interfaces."
+  }
+]

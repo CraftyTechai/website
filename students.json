@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Aisha Rao",
+    "email": "aisha.rao@example.com",
+    "joined": "2023-07-10",
+    "enrolled": ["Full Stack Development", "Generative AI"],
+    "progress": {"Full Stack Development": 82, "Generative AI": 34},
+    "certificates": ["Intro to JS"],
+    "bio": "Built multiple MERN apps and completed an internship at a startup.",
+    "avatar": "img/avatars/aisha.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Rahul Menon",
+    "email": "rahul.menon@example.com",
+    "joined": "2022-11-02",
+    "enrolled": ["Data Science", "Python for Engineers"],
+    "progress": {"Data Science": 64, "Python for Engineers": 100},
+    "certificates": ["Python for Engineers", "Data Wrangling"],
+    "bio": "Specializes in ML pipelines and visualization.",
+    "avatar": "img/avatars/rahul.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Sara Iqbal",
+    "email": "sara.iqbal@example.com",
+    "joined": "2024-03-15",
+    "enrolled": ["UI/UX"],
+    "progress": {"UI/UX": 28},
+    "certificates": [],
+    "bio": "Design intern with a focus on accessible interfaces.",
+    "avatar": "img/avatars/sara.jpg"
+  }
+  ,
+  {
+    "id": 4,
+    "name": "Vasamsetti Sumalatha",
+    "email": "vsumalatha9573@gmail.com",
+    "joined": "2026-08-18",
+    "enrolled": ["Digital Marketing"],
+    "progress": {"Digital Marketing": 0},
+    "certificates": [],
+    "bio": "Student at Aditya Women’s Degree College pursuing Digital Marketing.",
+    "avatar": "img/avatars/vasamsetti-sumalatha.jpg"
+  }
+]
