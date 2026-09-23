@@ -68,9 +68,24 @@ document.getElementById('certificate-verification-form').addEventListener('submi
   var id = document.getElementById('certificate-id').value.trim().toUpperCase();
   var resultDiv = document.getElementById('verification-result');
   var demo = {
-    'CT001': { name: 'Demo Student', course: 'Data Science', date: 'February 10, 2026' },
-    '12345': { name: 'Demo Student', course: 'Web Development', date: 'January 15, 2026' }
-  };
+  'CT001': { 
+    name: 'Demo Student', 
+    course: 'Data Science', 
+    date: 'February 10, 2026' 
+  },
+
+  '12345': { 
+    name: 'Demo Student', 
+    course: 'Web Development', 
+    date: 'January 15, 2026' 
+  },
+
+  'CTAI-AIML-2026-018': { 
+    name: 'Saikrishna Innamuri', 
+    course: 'Artificial Intelligence & Machine Learning', 
+    date: 'September 22, 2026' 
+  }
+};
   if (demo[id]) {
     var c = demo[id];
     resultDiv.innerHTML = '<p style="color:var(--ok); margin-bottom:6px;">✓ Certificate is valid</p>' +
